@@ -108,6 +108,8 @@ function pickPlanet(planets) {
         <li>Number of Moons: ${randomPlanet.moons} </li>
     </ol>
     <img src="${randomPlanet.image}">` 
+
+    return randomPlanet;
 }
 
 module.exports.addDestinationInfo = addDestinationInfo;
