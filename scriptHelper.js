@@ -86,13 +86,11 @@ async function myFetch() {
     let planetsReturned;
 
     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
-        response.json().then(function(json){   
-            console.log(json);          
+        return response.json();          
         })
-    });
-
     return planetsReturned;
-}
+    };
+    
 
 function pickPlanet(planets) {
     let randomPlanet = planets[Math.floor(Math.random() * planets.length)];
